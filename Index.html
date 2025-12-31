@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Happy New Year 2026</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP (animations) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Hammer.js (swipe & pinch) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+
+<body>
+
+  <!-- New Year overlay (appears only at midnight) -->
+  <div id="newYearOverlay">
+    <h1>Happy New Year, Sunshine ✨</h1>
+  </div>
+
+  <!-- Main scene -->
+  <div id="scene">
+
+    <!-- Lamp -->
+    <div id="lamp"></div>
+
+    <!-- Book -->
+    <div id="book" class="hidden">
+
+      <div class="page-container">
+
+        <!-- Left page -->
+        <div class="page left">
+          <div class="page-content"></div>
+        </div>
+
+        <!-- Right page -->
+        <div class="page right">
+          <div class="page-content"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Page counter -->
+    <div id="page-indicator"></div>
+
+  </div>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
