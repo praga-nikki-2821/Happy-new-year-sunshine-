@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0e0e0e;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Cormorant Garamond', serif;
+  overscroll-behavior: none;
+}
+
+#scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Lamp */
+#lamp {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 100px;
+  background: #333;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Book */
+#book {
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  width: 320px;
+  height: 220px;
+  background: #f5e6c8;
+  border-radius: 8px;
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.55),
+    inset 0 0 20px rgba(0,0,0,0.15);
+  touch-action: none;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Pages */
+.page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+}
+
+.page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #f5e6c8;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.08);
+}
+
+.page.left {
+  left: 0;
+  border-right: 1px solid rgba(0,0,0,0.15);
+}
+
+.page.right {
+  right: 0;
+  transform-origin: left center;
+}
+
+.page-content {
+  padding: 26px 22px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #3b2f1e;
+}
+
+/* Photo page */
+.photo-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.photo-page img {
+  width: 80%;
+  max-height: 70%;
+  padding: 8px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transform: rotate(-1.5deg);
+  filter: sepia(8%) contrast(1.05);
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Page indicator */
+#page-indicator {
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* New Year overlay */
+#newYearOverlay {
+  position: fixed;
+  inset: 0;
+  background: #0e0e0e;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+}
